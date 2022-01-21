@@ -73,7 +73,7 @@ def event_detail(event_id, error=""):
 @main.route('/event/<event_id>/<error>', methods=['POST'])
 def rsvp(event_id,error=""):
     """RSVP to an event."""
-    # TODO: Get the event with the given id from the database
+
     is_returning_guest = request.form.get('returning')
     guest_name = request.form.get('guest_name')
     event = Event.query.filter_by(id=event_id).one()
